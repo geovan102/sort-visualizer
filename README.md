@@ -1,4 +1,4 @@
-# Integer Sorting Comparison
+# Sorting Algorithm Visualization
 
 A small Python GUI application that generates integer arrays and compares multiple sorting algorithms visually and by execution time. Built with `tkinter` for the interface and `matplotlib` for step-by-step visualizations.
 
