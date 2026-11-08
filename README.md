@@ -1,108 +1,109 @@
-# Sorting Algorithm Visualization
+# 📊 Sorting Algorithm Visualization
 
-A small Python GUI application that generates integer arrays and compares multiple sorting algorithms visually and by execution time. Built with `tkinter` for the interface and `matplotlib` for step-by-step visualizations.
+A small Python desktop application that generates integer arrays and compares sorting algorithms visually and by execution time. It was developed as part of my bachelor thesis.
 
----
-
-## Features
-
-* Generate integer arrays with configurable size, min/max values and duplicate control.
-* Choose case: **Best**, **Average**, **Worst**.
-* Compare the following sorting algorithms:
-
-  * Bubble Sort
-  * Selection Sort
-  * Insertion Sort
-  * Merge Sort
-  * Quick Sort
-  * Heap Sort
-  * Counting Sort
-  * Radix Sort
-  * Bucket Sort
-  * Shell Sort
-* Visualize the sorting process step-by-step with bar charts.
-* Measure and display elapsed time (in milliseconds) for each algorithm.
+The interface is built with `tkinter` and the step-by-step charts with `matplotlib`.
 
 ---
 
-## Requirements
+## 🎓 Bachelor thesis
 
-* Python 3.8+ (should work with Python 3.x)
-* `tkinter` (usually included with standard Python installations)
-* `matplotlib`
+- 📄 [Thesis (PDF)](Thesis.pdf)
+- 🖥️ [Presentation (PDF)](Presentation.pdf)
 
-Install `matplotlib` with pip if you don't have it:
+---
+
+## ✨ Features
+
+- Generate integer arrays with a chosen size, minimum and maximum value, and an option to allow or block duplicates
+- Choose the input case: **Best**, **Average** or **Worst**
+- Compare these sorting algorithms:
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Merge Sort
+  - Quick Sort
+  - Heap Sort
+  - Counting Sort
+  - Radix Sort
+  - Bucket Sort
+  - Shell Sort
+- See each algorithm step by step in a bar chart
+- Measure and show the execution time in milliseconds
+
+---
+
+## 🛠️ Requirements
+
+- Python 3.8 or newer
+- `tkinter` (included with most Python installations)
+- `matplotlib`
+
+Install `matplotlib` with:
 
 ```bash
 pip install matplotlib
 ```
 
-> Note: On some Linux distributions you may need to install system packages for `tkinter` (for example `python3-tk`).
+> On some Linux systems `tkinter` must be installed separately (for example the package `python3-tk`).
 
 ---
 
-## Usage
+## 🚀 How to run it
 
-1. Clone or download the repository.
-2. Make sure dependencies are installed (`matplotlib`).
-3. Run the application:
+1. Download or clone the repository.
+2. Install `matplotlib` (see above).
+3. Run the program:
 
 ```bash
-python main.py
+python sort-visualizer.py
 ```
 
-### GUI controls
+### Controls
 
-* **Array Size**: Number of integers (validated between 1 and 500).
-* **Min Value / Max Value**: Range of generated integers. `Min` must be less than `Max`.
-* **Allow Duplicates**: When unchecked, values are unique; when checked, random duplicates are allowed.
-* **Select Case**: Choose `Best` (sorted ascending), `Average` (random), or `Worst` (sorted descending) input array.
-* **Execute**: Runs all algorithms sequentially and records their execution time and the list of intermediate steps.
-* **Show Graphs**: Opens a visualization window where you can pick an algorithm and step through its recorded states using `Start`, `Previous`, `Next`, and `Finish` buttons.
-
-The results panel shows each algorithm and the measured time in milliseconds. The visualization uses a bar chart for the current step of the selected algorithm.
+- **Array Size:** number of integers (1 to 500)
+- **Min Value / Max Value:** range of the numbers (min must be smaller than max)
+- **Allow Duplicates:** when unchecked, all values are unique
+- **Select Case:** Best (sorted ascending), Average (random) or Worst (sorted descending)
+- **Execute:** runs all algorithms and records their time and steps
+- **Show Graphs:** opens the visualization, where you can choose an algorithm and move through its steps with the Start, Previous, Next and Finish buttons
 
 ---
 
-## Implementation notes
+## 📝 Notes
 
-* Each sorting algorithm records intermediate steps into a `steps` list so that the GUI can visualize the algorithm progress.
-* Timing is captured in milliseconds using `time.time()` before and after the sort.
-* For algorithms that support negative numbers and mixes of signs (e.g., Radix Sort in this project), the implementation separates negatives from positives and combines them after sorting.
-* Validation prevents invalid configurations (size out of range, `min >= max`, insufficient unique values when duplicates are disallowed).
+- Each algorithm saves its intermediate steps in a list, so the graphs can show how the sorting progresses.
+- Time is measured in milliseconds with `time.time()`.
+- Radix Sort handles negative numbers by sorting them separately from the positive ones.
+- Invalid settings are blocked (size out of range, min not smaller than max, not enough unique values).
 
 ---
 
-## Project structure
+## 📁 Project files
 
 ```
-README.md
-main.py         # Main application (GUI + sorting algorithms + visualization)
+sort-visualizer.py   The application (interface, algorithms, graphs)
+Thesis.pdf           The bachelor thesis
+Presentation.pdf     The thesis presentation
+LICENSE              License
 ```
 
 ---
 
-## Known limitations & TODO
+## 🗺️ Known limitations
 
-* Very large arrays (close to 500) may produce many visualization steps and become slow to render.
-* The GUI uses a simple step-jump heuristic when navigating steps — making smooth animation controls would be a useful enhancement.
-* Add unit tests for algorithm correctness and edge cases.
-* Add command-line interface to run headless benchmarks without GUI.
-
----
-
-## Contribution
-
-Contributions are welcome. Please open an issue or submit a pull request with a brief description of the change.
+- Very large arrays (close to 500) create many steps and can be slow to draw.
+- Step navigation is basic, with no smooth animation.
+- There are no automated tests yet.
 
 ---
 
-## License
+## 📄 License
 
-This project is provided under the MIT License. See `LICENSE` for details (or add an MIT license file).
+The code is available under the MIT License. See the `LICENSE` file.
 
 ---
 
-## Contact
+## 👤 Author
 
-If you have questions or suggestions, open an issue or contact the repository owner.
+Georgios Vanasas
