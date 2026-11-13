@@ -1,23 +1,17 @@
-# 📊 Sorting Algorithm Visualization
+# Sorting Algorithm Visualization
 
-A small Python desktop application that generates integer arrays and compares sorting algorithms visually and by execution time. It was developed as part of my bachelor thesis.
+A Python desktop application that visualizes sorting algorithms step by step and compares their execution times. Developed as part of my bachelor's thesis.
 
-The interface is built with `tkinter` and the step-by-step charts with `matplotlib`.
+## About
 
----
+The project explores how different sorting algorithms behave with different input cases and array sizes, providing a visual way to understand their execution.
 
-## 🎓 Bachelor thesis
+## Features
 
-- 📄 [Thesis (PDF)](Thesis.pdf)
-- 🖥️ [Presentation (PDF)](Presentation.pdf)
-
----
-
-## ✨ Features
-
-- Generate integer arrays with a chosen size, minimum and maximum value, and an option to allow or block duplicates
-- Choose the input case: **Best**, **Average** or **Worst**
-- Compare these sorting algorithms:
+- Generate integer arrays with a custom size, minimum and maximum value.
+- Choose whether duplicate values are allowed.
+- Select the input case: Best, Average or Worst.
+- Compare 10 sorting algorithms:
   - Bubble Sort
   - Selection Sort
   - Insertion Sort
@@ -28,82 +22,81 @@ The interface is built with `tkinter` and the step-by-step charts with `matplotl
   - Radix Sort
   - Bucket Sort
   - Shell Sort
-- See each algorithm step by step in a bar chart
-- Measure and show the execution time in milliseconds
+- Visualize each algorithm step by step using bar charts.
+- Measure and compare execution times in milliseconds.
+- Navigate through the sorting steps using Start, Previous, Next and Finish controls.
 
----
+## Tech Stack
 
-## 🛠️ Requirements
+- Python
+- Tkinter
+- Matplotlib
+
+## Requirements
 
 - Python 3.8 or newer
-- `tkinter` (included with most Python installations)
-- `matplotlib`
+- Tkinter
+- Matplotlib
 
-Install `matplotlib` with:
+Install Matplotlib using:
 
 ```bash
 pip install matplotlib
 ```
 
-> On some Linux systems `tkinter` must be installed separately (for example the package `python3-tk`).
-
----
-
-## 🚀 How to run it
-
-1. Download or clone the repository.
-2. Install `matplotlib` (see above).
-3. Run the program:
+On some Linux systems, Tkinter may need to be installed separately:
 
 ```bash
-python sort-visualizer.py
+sudo apt install python3-tk
 ```
 
-### Controls
+## Getting Started
 
-- **Array Size:** number of integers (1 to 500)
-- **Min Value / Max Value:** range of the numbers (min must be smaller than max)
-- **Allow Duplicates:** when unchecked, all values are unique
-- **Select Case:** Best (sorted ascending), Average (random) or Worst (sorted descending)
-- **Execute:** runs all algorithms and records their time and steps
-- **Show Graphs:** opens the visualization, where you can choose an algorithm and move through its steps with the Start, Previous, Next and Finish buttons
+1. Clone or download the repository.
+2. Install the required dependencies.
+3. Run the application:
 
----
+   ```bash
+   python sort-visualizer.py
+   ```
 
-## 📝 Notes
+## Usage
 
-- Each algorithm saves its intermediate steps in a list, so the graphs can show how the sorting progresses.
-- Time is measured in milliseconds with `time.time()`.
-- Radix Sort handles negative numbers by sorting them separately from the positive ones.
-- Invalid settings are blocked (size out of range, min not smaller than max, not enough unique values).
+- **Array Size:** Choose the number of integers (1 to 500).
+- **Min Value / Max Value:** Set the range of the generated numbers.
+- **Allow Duplicates:** Allow or prevent duplicate values.
+- **Select Case:** Choose Best (sorted ascending), Average (random) or Worst (sorted descending).
+- **Execute:** Run all sorting algorithms and record their execution times and steps.
+- **Show Graphs:** Open the visualizations and select an algorithm to explore its sorting steps.
 
----
+Use the Start, Previous, Next and Finish buttons to navigate through the visualization.
 
-## 📁 Project files
+## Project Structure
 
+```text
+sort-visualizer.py   Application interface, algorithms and visualizations
+Thesis.pdf           Bachelor's thesis
+Presentation.pdf     Thesis presentation
+LICENSE              MIT License
 ```
-sort-visualizer.py   The application (interface, algorithms, graphs)
-Thesis.pdf           The bachelor thesis
-Presentation.pdf     The thesis presentation
-LICENSE              License
-```
 
----
+## Implementation Notes
 
-## 🗺️ Known limitations
+- Each algorithm stores its intermediate steps to support step-by-step visualization.
+- Execution time is measured in milliseconds using `time.time()`.
+- Radix Sort handles negative numbers by sorting negative and positive values separately.
+- Invalid settings are checked before execution, including array size, value range and the number of available unique values.
 
-- Very large arrays (close to 500) create many steps and can be slow to draw.
-- Step navigation is basic, with no smooth animation.
+## Known Limitations
+
+- Large arrays (close to 500 elements) generate many steps and can take longer to visualize.
+- Step navigation is basic and does not include smooth animations.
 - There are no automated tests yet.
 
----
+## License
 
-## 📄 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-The code is available under the MIT License. See the `LICENSE` file.
+## Author
 
----
-
-## 👤 Author
-
-Georgios Vanasas
+**Georgios Vanasas**
