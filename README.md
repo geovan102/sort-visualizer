@@ -56,6 +56,11 @@ On some Linux systems, Tkinter may need to be installed separately:
 sudo apt install python3-tk
 ```
 
+## Screenshots
+
+![Graphical User Interface](docs/graphical-user-interface.png)
+![Graphical Representation](docs/graphical-representation.png)
+
 ## Getting Started
 
 1. Clone or download the repository.
