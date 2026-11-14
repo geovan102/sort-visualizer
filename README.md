@@ -2,11 +2,13 @@
 
 A Python desktop application that visualizes sorting algorithms step by step and compares their execution times. Developed as part of my bachelor's thesis.
 
-## Download
+## Download (Windows)
 
-Download the latest Windows version from GitHub Releases.
+1. Go to the [**latest release**](https://github.com/geovan102/sort-visualizer/releases/latest).
+2. Download `sort-visualizer.exe` from the **Assets** section.
+3. Double-click the file to run it. No Python installation is required.
 
-The executable is available for Windows and does not require a separate Python installation.
+If you use Linux or macOS, or prefer to run the application from source, see [Run from Source](#run-from-source).
 
 ## About
 
@@ -38,13 +40,30 @@ The project explores how different sorting algorithms behave with different inpu
 - Tkinter
 - Matplotlib
 
-## Requirements
+## Screenshots
+
+![Graphical User Interface](docs/graphical-user-interface.png)
+![Graphical Representation](docs/graphical-representation.png)
+
+## Getting Started
+
+### Option 1: Run the Windows Executable
+
+1. Visit the [latest GitHub Release](https://github.com/geovan102/sort-visualizer/releases/latest).
+2. Download the `.exe` file.
+3. Run the executable to launch the application.
+
+No Python installation or additional dependencies are required.
+
+### Option 2: Run from Source
+
+#### Requirements
 
 - Python 3.8 or newer
 - Tkinter
 - Matplotlib
 
-Install Matplotlib using:
+Install Matplotlib:
 
 ```bash
 pip install matplotlib
@@ -56,15 +75,17 @@ On some Linux systems, Tkinter may need to be installed separately:
 sudo apt install python3-tk
 ```
 
-## Screenshots
+#### Run the Application
 
-![Graphical User Interface](docs/graphical-user-interface.png)
-![Graphical Representation](docs/graphical-representation.png)
+1. Clone the repository:
 
-## Getting Started
+   ```bash
+   git clone https://github.com/geovan102/sort-visualizer.git
+   cd sort-visualizer
+   ```
 
-1. Clone or download the repository.
 2. Install the required dependencies.
+
 3. Run the application:
 
    ```bash
@@ -85,11 +106,18 @@ Use the Start, Previous, Next and Finish buttons to navigate through the visuali
 ## Project Structure
 
 ```text
-sort-visualizer.py   Application interface, algorithms and visualizations
-Thesis.pdf           Bachelor's thesis
-Presentation.pdf     Thesis presentation
-LICENSE              MIT License
-```
+sort-visualizer/
+│
+├── docs/
+│   ├── graphical-user-interface.png
+│   └── graphical-representation.png
+│
+├── .gitignore
+├── LICENSE
+├── Presentation.pdf
+├── README.md
+├── Thesis.pdf
+└── sort-visualizer.py
 
 ## Implementation Notes
 
