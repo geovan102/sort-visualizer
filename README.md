@@ -2,6 +2,12 @@
 
 A Python desktop application that visualizes sorting algorithms step by step and compares their execution times. Developed as part of my bachelor's thesis.
 
+Download
+
+Download the latest Windows version from GitHub Releases.
+
+The executable is available for Windows and does not require a separate Python installation.
+
 ## About
 
 The project explores how different sorting algorithms behave with different input cases and array sizes, providing a visual way to understand their execution.
