@@ -47,17 +47,7 @@ The project explores how different sorting algorithms behave with different inpu
 
 ## Getting Started
 
-### Option 1: Run the Windows Executable
-
-1. Visit the [latest GitHub Release](https://github.com/geovan102/sort-visualizer/releases/latest).
-2. Download the `.exe` file.
-3. Run the executable to launch the application.
-
-No Python installation or additional dependencies are required.
-
-### Option 2: Run from Source
-
-#### Requirements
+### Requirements
 
 - Python 3.8 or newer
 - Tkinter
