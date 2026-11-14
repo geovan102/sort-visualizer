@@ -118,6 +118,7 @@ sort-visualizer/
 ├── README.md
 ├── Thesis.pdf
 └── sort-visualizer.py
+```
 
 ## Implementation Notes
 
