@@ -2,7 +2,7 @@
 
 A Python desktop application that visualizes sorting algorithms step by step and compares their execution times. Developed as part of my bachelor's thesis.
 
-Download
+## Download
 
 Download the latest Windows version from GitHub Releases.
 
