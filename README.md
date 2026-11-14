@@ -1,108 +1,113 @@
-# Integer Sorting Comparison
+# Sorting Algorithm Visualization
 
-A small Python GUI application that generates integer arrays and compares multiple sorting algorithms visually and by execution time. Built with `tkinter` for the interface and `matplotlib` for step-by-step visualizations.
+A Python desktop application that visualizes sorting algorithms step by step and compares their execution times. Developed as part of my bachelor's thesis.
 
----
+## Download
+
+Download the latest Windows version from GitHub Releases.
+
+The executable is available for Windows and does not require a separate Python installation.
+
+## About
+
+The project explores how different sorting algorithms behave with different input cases and array sizes, providing a visual way to understand their execution.
 
 ## Features
 
-* Generate integer arrays with configurable size, min/max values and duplicate control.
-* Choose case: **Best**, **Average**, **Worst**.
-* Compare the following sorting algorithms:
+- Generate integer arrays with a custom size, minimum and maximum value.
+- Choose whether duplicate values are allowed.
+- Select the input case: Best, Average or Worst.
+- Compare 10 sorting algorithms:
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Merge Sort
+  - Quick Sort
+  - Heap Sort
+  - Counting Sort
+  - Radix Sort
+  - Bucket Sort
+  - Shell Sort
+- Visualize each algorithm step by step using bar charts.
+- Measure and compare execution times in milliseconds.
+- Navigate through the sorting steps using Start, Previous, Next and Finish controls.
 
-  * Bubble Sort
-  * Selection Sort
-  * Insertion Sort
-  * Merge Sort
-  * Quick Sort
-  * Heap Sort
-  * Counting Sort
-  * Radix Sort
-  * Bucket Sort
-  * Shell Sort
-* Visualize the sorting process step-by-step with bar charts.
-* Measure and display elapsed time (in milliseconds) for each algorithm.
+## Tech Stack
 
----
+- Python
+- Tkinter
+- Matplotlib
 
 ## Requirements
 
-* Python 3.8+ (should work with Python 3.x)
-* `tkinter` (usually included with standard Python installations)
-* `matplotlib`
+- Python 3.8 or newer
+- Tkinter
+- Matplotlib
 
-Install `matplotlib` with pip if you don't have it:
+Install Matplotlib using:
 
 ```bash
 pip install matplotlib
 ```
 
-> Note: On some Linux distributions you may need to install system packages for `tkinter` (for example `python3-tk`).
+On some Linux systems, Tkinter may need to be installed separately:
 
----
+```bash
+sudo apt install python3-tk
+```
+
+## Screenshots
+
+![Graphical User Interface](docs/graphical-user-interface.png)
+![Graphical Representation](docs/graphical-representation.png)
+
+## Getting Started
+
+1. Clone or download the repository.
+2. Install the required dependencies.
+3. Run the application:
+
+   ```bash
+   python sort-visualizer.py
+   ```
 
 ## Usage
 
-1. Clone or download the repository.
-2. Make sure dependencies are installed (`matplotlib`).
-3. Run the application:
+- **Array Size:** Choose the number of integers (1 to 500).
+- **Min Value / Max Value:** Set the range of the generated numbers.
+- **Allow Duplicates:** Allow or prevent duplicate values.
+- **Select Case:** Choose Best (sorted ascending), Average (random) or Worst (sorted descending).
+- **Execute:** Run all sorting algorithms and record their execution times and steps.
+- **Show Graphs:** Open the visualizations and select an algorithm to explore its sorting steps.
 
-```bash
-python main.py
+Use the Start, Previous, Next and Finish buttons to navigate through the visualization.
+
+## Project Structure
+
+```text
+sort-visualizer.py   Application interface, algorithms and visualizations
+Thesis.pdf           Bachelor's thesis
+Presentation.pdf     Thesis presentation
+LICENSE              MIT License
 ```
 
-### GUI controls
+## Implementation Notes
 
-* **Array Size**: Number of integers (validated between 1 and 500).
-* **Min Value / Max Value**: Range of generated integers. `Min` must be less than `Max`.
-* **Allow Duplicates**: When unchecked, values are unique; when checked, random duplicates are allowed.
-* **Select Case**: Choose `Best` (sorted ascending), `Average` (random), or `Worst` (sorted descending) input array.
-* **Execute**: Runs all algorithms sequentially and records their execution time and the list of intermediate steps.
-* **Show Graphs**: Opens a visualization window where you can pick an algorithm and step through its recorded states using `Start`, `Previous`, `Next`, and `Finish` buttons.
+- Each algorithm stores its intermediate steps to support step-by-step visualization.
+- Execution time is measured in milliseconds using `time.time()`.
+- Radix Sort handles negative numbers by sorting negative and positive values separately.
+- Invalid settings are checked before execution, including array size, value range and the number of available unique values.
 
-The results panel shows each algorithm and the measured time in milliseconds. The visualization uses a bar chart for the current step of the selected algorithm.
+## Known Limitations
 
----
-
-## Implementation notes
-
-* Each sorting algorithm records intermediate steps into a `steps` list so that the GUI can visualize the algorithm progress.
-* Timing is captured in milliseconds using `time.time()` before and after the sort.
-* For algorithms that support negative numbers and mixes of signs (e.g., Radix Sort in this project), the implementation separates negatives from positives and combines them after sorting.
-* Validation prevents invalid configurations (size out of range, `min >= max`, insufficient unique values when duplicates are disallowed).
-
----
-
-## Project structure
-
-```
-README.md
-main.py         # Main application (GUI + sorting algorithms + visualization)
-```
-
----
-
-## Known limitations & TODO
-
-* Very large arrays (close to 500) may produce many visualization steps and become slow to render.
-* The GUI uses a simple step-jump heuristic when navigating steps — making smooth animation controls would be a useful enhancement.
-* Add unit tests for algorithm correctness and edge cases.
-* Add command-line interface to run headless benchmarks without GUI.
-
----
-
-## Contribution
-
-Contributions are welcome. Please open an issue or submit a pull request with a brief description of the change.
-
----
+- Large arrays (close to 500 elements) generate many steps and can take longer to visualize.
+- Step navigation is basic and does not include smooth animations.
+- There are no automated tests yet.
 
 ## License
 
-This project is provided under the MIT License. See `LICENSE` for details (or add an MIT license file).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+## Author
 
-## Contact
-
-If you have questions or suggestions, open an issue or contact the repository owner.
+**Georgios Vanasas**
