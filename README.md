@@ -1,4 +1,4 @@
-# # Sorting Algorithm Visualizer
+# Sorting Algorithm Visualizer
 
 A Python desktop application that visualizes sorting algorithms step by step and compares their execution times.
 
