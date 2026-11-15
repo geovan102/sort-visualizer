@@ -1,6 +1,13 @@
-# Sorting Algorithm Visualization
+# # Sorting Algorithm Visualizer
 
-A Python desktop application that visualizes sorting algorithms step by step and compares their execution times. Developed as part of my bachelor's thesis.
+A Python desktop application that visualizes sorting algorithms step by step and compares their execution times.
+
+## Thesis & Presentation
+
+This project was developed as part of my bachelor's thesis.
+
+- [Read the Bachelor's Thesis (PDF)](docs/Thesis.pdf)
+- [View the Project Presentation (PDF)](docs/Presentation.pdf)
 
 ## Download (Windows)
 
@@ -53,7 +60,7 @@ The project explores how different sorting algorithms behave with different inpu
 - Tkinter
 - Matplotlib
 
-Install Matplotlib:
+Install the required dependencies:
 
 ```bash
 pip install matplotlib
@@ -65,7 +72,7 @@ On some Linux systems, Tkinter may need to be installed separately:
 sudo apt install python3-tk
 ```
 
-#### Run the Application
+### Run the Application
 
 1. Clone the repository:
 
@@ -100,13 +107,13 @@ sort-visualizer/
 │
 ├── docs/
 │   ├── graphical-user-interface.png
-│   └── graphical-representation.png
+│   ├── graphical-representation.png
+│   ├── Thesis.pdf
+│   └── Presentation.pdf
 │
 ├── .gitignore
 ├── LICENSE
-├── Presentation.pdf
 ├── README.md
-├── Thesis.pdf
 └── sort-visualizer.py
 ```
 
